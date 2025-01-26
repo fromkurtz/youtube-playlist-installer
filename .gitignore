@@ -1,7 +1,7 @@
-# Ignore o ambiente virtual
+
 venv/
 
-# Ignore arquivos contendo chaves sensíveis
+
 *.pyc
 innertube.py
 .env
