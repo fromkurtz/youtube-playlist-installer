@@ -34,6 +34,7 @@ def download_videos(url_list, output_folder="."):
             stream = yt.streams.filter(file_extension="mp4", progressive=True).get_highest_resolution()
             stream.download(output_folder)
             print(f"Video '{yt.title}'\033[0;32m downloaded successfully!\033[m")
+
         except Exception as e:
             print(f"Error downloading {url}: {e}")
             
@@ -68,6 +69,7 @@ while True:
     # Call the function to download the videos, saving them to the 'output_file' folder
     if url_list:
         download_videos(url_list, output_folder=output_file)
+        
     else:
         print("No URLs found in the file.")
 
